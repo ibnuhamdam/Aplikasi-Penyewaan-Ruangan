@@ -1,0 +1,42 @@
+/* style only for index page */
+
+.list-working_space {
+    padding: 0 300px;
+    box-sizing: border-box;
+}
+
+.item-working_space {
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin: 0 10px;
+    box-sizing: border-box;
+    padding: 0;
+    cursor: pointer;
+}
+
+.item-working_space:hover {
+    border: 2px solid rgba(192, 57, 43, .5);
+    transition: border .2s ease-in;
+}
+
+.title-working_space {
+    margin: 20px;
+    text-align: center;
+}
+
+.desc-working_space {
+    text-align: center;
+    margin: 15px;
+}
+
+.outer {
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background-color: #c0392b;
+    color: #fff;
+    margin-top: 10px;
+    padding: 12px
+}
