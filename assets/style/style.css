@@ -6,6 +6,15 @@ body, html {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    transition: .3s ease-in-out;
+    opacity: 0.8;
+}
+
 .row {
     margin: 0 !important;
 }
