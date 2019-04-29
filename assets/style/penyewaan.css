@@ -1,0 +1,52 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+.activestep {
+    width: 200px;
+    height: 50px;
+    background-color: #e74c3c;
+    font-family: 'Lato', sans-serif;
+}
+.segitigaactive {
+    margin-top: 7px;
+    width: 35px;
+    height: 35px;
+    background-color: thistle;
+    margin-left: 200%;
+    transform: rotate(45deg);
+    z-index : 1000;
+    background-color: #e74c3c;
+}
+.steps {
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+}
+.step {
+    margin-top: 3%;
+    text-transform: uppercase;
+}
+.stepsbyr {
+    border: 1px solid black;
+    border-left: none;
+}
+.tu {
+    margin-top: 7px;
+    margin-left: 6%;
+}
+.segitiga {
+    margin-top: 7px;
+    width: 35px;
+    height: 35px;
+    margin-left: 200%;
+    transform: rotate(45deg);
+    border : 1px solid black;
+    border-left: none;
+    border-bottom: none; 
+}
+.step p {
+    font-size: 21px;
+}
+.pendataan {
+    margin-top: 7px;
+}
