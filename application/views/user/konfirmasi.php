@@ -33,6 +33,7 @@
         <div class="container">
             <div class="col-md-9 offset-md-1 text-center text-dark">
                 <h2>Silahkan cek email anda untuk mendapatkan konfirmasi penyetujuan. Anda akan mendapatkan link menuju halaman pembayaran jika sudah disetujui</h2>
+                <a href="https://gmail.com" target="_blank"><button class="btn btn-danger text-white" style="margin-top:20px;">Cek Email</button></a>
             </div>
         </div>
     </div>

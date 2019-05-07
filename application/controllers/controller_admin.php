@@ -26,10 +26,16 @@ class controller_admin extends CI_Controller {
 
         $this->load->view('admin/index',$data);
     }
+    
     public function table()
     {
         if ($this->session->userdata('logged_in')==1) {
-            redirect('controller_admin/tables-basic');
+            $table = "penyewaan";
+
+            $hasil = $this->admin_model->get_penyewa($table);
+
+            $data['data_ke_view']= $hasil;
+            $this->load->view("admin/tables-basic",$data);
         }else{
         $this->load->view("login");
         }

@@ -42,7 +42,7 @@ class controller_utama extends CI_Controller {
         $tahunawal = $this->input->post('tahunawal');
         $hariakhir = $this->input->post('hariakhir');
 
-        $lama = $hariakhir - $hariawal;
+        $lama = ($hariakhir - $hariawal) + 1;
 
         $data = array (
             'nama' => $nama,

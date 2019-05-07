@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Admin Pages</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -72,35 +72,36 @@
                             <strong class="card-title">Tabel Penyewa</strong>
                         </div>
                         <div class="card-body">
-                            <table class="table">
-                                <thead class="thead-dark">
+                        <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                          <th scope="col">#</th>
+                                          <th scope="col">Nama Penyewa</th>
+                                          <th scope="col">Email</th>
+                                          <th scope="col">Organisasi/Kepanitian</th>
+                                          <th scope="col">Jumlah</th>
+                                          <th scope="col">Keperluan</th>
+                                          <th scope="col">Lama</th>
+                                          <th scope="col">Status</th>
+                                          <th scope="col"></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <?php foreach ($data_ke_view as $data): ?>
                                     <tr>
-                                      <th scope="col">#</th>
-                                      <th scope="col">Nama Penyewa</th>
-                                      <th scope="col">Email</th>
-                                      <th scope="col">Organisasi/Kepanitian</th>
-                                      <th scope="col">Jumlah</th>
-                                      <th scope="col">Keperluan</th>
-                                      <th scope="col">Lama</th>
-                                      <th scope="col">Status</th>
-                                      <th scope="col"></th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>None</td>
-                                    <td><a href="#"> <i class="fas fa-edit text-success"></i></a></td>
-                                </tr>
-                                
-                              </tbody>
-                            </table>
+                                        <th scope="row"><?php echo $data["id"];?></th>
+                                        <td><?php echo $data["nama"]; ?></td>
+                                        <td><?php echo $data["email"]; ?></td>
+                                        <td><?php echo $data["organisasi"]; ?></td>
+                                        <td><?php echo $data["jumlah"]; ?></td>
+                                        <td><?php echo $data["keperluan"]; ?></td>
+                                        <td><?php echo $data["Lama"]; ?> hari</td>
+                                        <td><?php echo $data["status"]; ?></td>
+                                        <td class="text-center"><a href="<?php echo site_url('controller_admin/form/'.$data["id"]);?>"> <i class="fas fa-edit text-success"></i></a></td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                  </tbody>
+                                </table>
 
                         </div>
                     </div>

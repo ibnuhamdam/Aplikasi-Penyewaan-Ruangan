@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Admin Pages</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -126,12 +126,21 @@
                                 </div>
                                 <div class="form-group"><label for="kartu" class=" form-control-label">Kartu</label>
                                     <input type="text" id="kartu" name="kartu" value="<?php echo $data["kartu_identitas"];?>" class="form-control" >
+                                    <img src="<?php echo base_url('/assets/img/'.$data["kartu_identitas"]);?>" style="height : 300px;" class="img-fluid" alt="">
                                 </div>
                                 <div class="form-group"><label for="status" class=" form-control-label">Status</label>
-                                    <input type="text" id="status" name="status" class="form-control">
+                                    <select class="form-control" id="exampleFormControlSelect1" name="status">
+                                        <option>Diterima</option>
+                                        <option>Tidak Diterima</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <a href="gmailto: <?php echo $data["email"];?>" target="_blank" style="color:white;text-decoration:none;" class="btn btn-primary">Kirim email verifikasi</a>
+                                    <a href="mailto:<?php echo $data["email"]?>?subject=Konfirmasi Persetujuan&body= Selamat ! kami telah mensetujui berkas anda untuk melakukan peminjaman pada tanggal <?php echo $data["tanggal"];?> 
+                                    Silahkan kunjungi link berikut <?php echo site_url("controller_utama/pembayaran");?>" target="_blank" style="color:white;text-decoration:none;" class="btn btn-primary">Kirim email verifikasi diterima</a>
+                                </div>
+                                <div class="form-group">
+                                    <a href="mailto:<?php echo $data["email"]?>?subject=Konfirmasi Persetujuan&body= Mohon maaf peminjaman anda pada tanggal <?php echo $data["tanggal"];?> belum dapat kami terima dengan beberapa alasan" 
+                                    target="_blank" style="color:white;text-decoration:none;" class="btn btn-danger">Kirim email verifikasi tidak diterima</a>
                                 </div>
                                 <a href="#"><button class="btn btn-success">Update</button></a>
                                 <?php endforeach;?>
@@ -175,6 +184,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="<?php echo base_url('/assets/js/'); ?>main.js"></script>
+    <script src="<?php echo base_url('/assets/js/'); ?>check.js"></script>
+    
     
 
     <!--Local Stuff-->
